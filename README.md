@@ -187,6 +187,7 @@ select {
     <option value="general">Umum</option>
     <option value="math">Matematika</option>
     <option value="survival">Survival</option>
+    <option value="world">Negara Dunia</option> <!-- Opsi baru ditambahkan -->
   </select><br>
   <label>Pilih Kesulitan:</label><br>
   <select id="levelSelect">
@@ -319,6 +320,45 @@ const questionBank = {
       {q: 'Unsur kimia O adalah?', opts: ['Emas', 'Oksigen', 'Perak', 'Besi'], a: 'Oksigen', ex: 'O adalah simbol untuk Oksigen'},
       {q: 'Tahun manusia pertama mendarat di bulan?', opts: [1967, 1969, 1971, 1973], a: 1969, ex: 'Manusia pertama mendarat di bulan tahun 1969'}
     ]
+  },
+  // MODE BARU: NEGARA DUNIA
+  world: {
+    easy: [
+      {q: 'Ibu kota Amerika Serikat?', opts: ['New York', 'Washington D.C.', 'Los Angeles', 'Chicago'], a: 'Washington D.C.', ex: 'Ibu kota Amerika Serikat adalah Washington D.C.'},
+      {q: 'Ibu kota Jepang?', opts: ['Osaka', 'Kyoto', 'Tokyo', 'Hiroshima'], a: 'Tokyo', ex: 'Ibu kota Jepang adalah Tokyo'},
+      {q: 'Ibu kota Inggris?', opts: ['Manchester', 'Liverpool', 'London', 'Birmingham'], a: 'London', ex: 'Ibu kota Inggris adalah London'},
+      {q: 'Ibu kota Prancis?', opts: ['Lyon', 'Marseille', 'Paris', 'Nice'], a: 'Paris', ex: 'Ibu kota Prancis adalah Paris'},
+      {q: 'Ibu kota Jerman?', opts: ['Munich', 'Hamburg', 'Berlin', 'Frankfurt'], a: 'Berlin', ex: 'Ibu kota Jerman adalah Berlin'},
+      {q: 'Ibu kota Italia?', opts: ['Milan', 'Venice', 'Rome', 'Naples'], a: 'Rome', ex: 'Ibu kota Italia adalah Rome'},
+      {q: 'Ibu kota Australia?', opts: ['Sydney', 'Melbourne', 'Canberra', 'Perth'], a: 'Canberra', ex: 'Ibu kota Australia adalah Canberra'},
+      {q: 'Ibu kota Kanada?', opts: ['Toronto', 'Vancouver', 'Ottawa', 'Montreal'], a: 'Ottawa', ex: 'Ibu kota Kanada adalah Ottawa'},
+      {q: 'Ibu kota Brasil?', opts: ['Rio de Janeiro', 'São Paulo', 'Brasília', 'Salvador'], a: 'Brasília', ex: 'Ibu kota Brasil adalah Brasília'},
+      {q: 'Ibu kota Rusia?', opts: ['St. Petersburg', 'Moscow', 'Kazan', 'Novosibirsk'], a: 'Moscow', ex: 'Ibu kota Rusia adalah Moscow'}
+    ],
+    medium: [
+      {q: 'Ibu kota Mesir?', opts: ['Alexandria', 'Cairo', 'Giza', 'Luxor'], a: 'Cairo', ex: 'Ibu kota Mesir adalah Cairo'},
+      {q: 'Ibu kota India?', opts: ['Mumbai', 'Delhi', 'Kolkata', 'Bangalore'], a: 'Delhi', ex: 'Ibu kota India adalah Delhi'},
+      {q: 'Ibu kota China?', opts: ['Shanghai', 'Beijing', 'Guangzhou', 'Shenzhen'], a: 'Beijing', ex: 'Ibu kota China adalah Beijing'},
+      {q: 'Ibu kota Korea Selatan?', opts: ['Busan', 'Seoul', 'Incheon', 'Daegu'], a: 'Seoul', ex: 'Ibu kota Korea Selatan adalah Seoul'},
+      {q: 'Ibu kota Meksiko?', opts: ['Guadalajara', 'Monterrey', 'Mexico City', 'Puebla'], a: 'Mexico City', ex: 'Ibu kota Meksiko adalah Mexico City'},
+      {q: 'Ibu kota Argentina?', opts: ['Córdoba', 'Rosario', 'Buenos Aires', 'Mendoza'], a: 'Buenos Aires', ex: 'Ibu kota Argentina adalah Buenos Aires'},
+      {q: 'Ibu kota Turki?', opts: ['Istanbul', 'Ankara', 'Izmir', 'Antalya'], a: 'Ankara', ex: 'Ibu kota Turki adalah Ankara'},
+      {q: 'Ibu kota Spanyol?', opts: ['Barcelona', 'Madrid', 'Valencia', 'Seville'], a: 'Madrid', ex: 'Ibu kota Spanyol adalah Madrid'},
+      {q: 'Ibu kota Thailand?', opts: ['Chiang Mai', 'Bangkok', 'Phuket', 'Pattaya'], a: 'Bangkok', ex: 'Ibu kota Thailand adalah Bangkok'},
+      {q: 'Ibu kota Vietnam?', opts: ['Ho Chi Minh City', 'Hanoi', 'Da Nang', 'Hai Phong'], a: 'Hanoi', ex: 'Ibu kota Vietnam adalah Hanoi'}
+    ],
+    hard: [
+      {q: 'Ibu kota Afrika Selatan?', opts: ['Cape Town', 'Pretoria', 'Johannesburg', 'Durban'], a: 'Pretoria', ex: 'Ibu kota Afrika Selatan adalah Pretoria'},
+      {q: 'Ibu kota Malaysia?', opts: ['Kuala Lumpur', 'Putrajaya', 'Penang', 'Johor Bahru'], a: 'Kuala Lumpur', ex: 'Ibu kota Malaysia adalah Kuala Lumpur'},
+      {q: 'Ibu kota Swiss?', opts: ['Zurich', 'Geneva', 'Bern', 'Basel'], a: 'Bern', ex: 'Ibu kota Swiss adalah Bern'},
+      {q: 'Ibu kota Belanda?', opts: ['Rotterdam', 'Amsterdam', 'The Hague', 'Utrecht'], a: 'Amsterdam', ex: 'Ibu kota Belanda adalah Amsterdam'},
+      {q: 'Ibu kota Swedia?', opts: ['Gothenburg', 'Stockholm', 'Malmö', 'Uppsala'], a: 'Stockholm', ex: 'Ibu kota Swedia adalah Stockholm'},
+      {q: 'Ibu kota Norwegia?', opts: ['Bergen', 'Oslo', 'Stavanger', 'Trondheim'], a: 'Oslo', ex: 'Ibu kota Norwegia adalah Oslo'},
+      {q: 'Ibu kota Finlandia?', opts: ['Espoo', 'Tampere', 'Helsinki', 'Vantaa'], a: 'Helsinki', ex: 'Ibu kota Finlandia adalah Helsinki'},
+      {q: 'Ibu kota Denmark?', opts: ['Aarhus', 'Copenhagen', 'Odense', 'Aalborg'], a: 'Copenhagen', ex: 'Ibu kota Denmark adalah Copenhagen'},
+      {q: 'Ibu kota Portugal?', opts: ['Porto', 'Lisbon', 'Faro', 'Coimbra'], a: 'Lisbon', ex: 'Ibu kota Portugal adalah Lisbon'},
+      {q: 'Ibu kota Yunani?', opts: ['Thessaloniki', 'Athens', 'Patras', 'Heraklion'], a: 'Athens', ex: 'Ibu kota Yunani adalah Athens'}
+    ]
   }
 };
 
@@ -328,6 +368,13 @@ let currentQuestions = [], currentIndex = 0, score = 0, timerInterval = null, ti
 function startGame() {
   const mode = document.getElementById('modeSelect').value;
   const level = document.getElementById('levelSelect').value;
+  
+  // Pastikan mode yang dipilih tersedia
+  if (!questionBank[mode] || !questionBank[mode][level]) {
+    alert('Mode atau level yang dipilih tidak tersedia!');
+    return;
+  }
+  
   currentQuestions = shuffle(questionBank[mode][level]).slice(0, totalQuestions);
   currentIndex = 0;
   score = 0;
