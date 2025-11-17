@@ -337,13 +337,13 @@ function startGame() {
   
   // Set timer berdasarkan mode
   if (mode === 'survival') {
-    timeLeft = 10;
-  } else if (level === 'easy') {
     timeLeft = 30;
+  } else if (level === 'easy') {
+    timeLeft = 90;
   } else if (level === 'medium') {
-    timeLeft = 25;
+    timeLeft = 75;
   } else {
-    timeLeft = 20;
+    timeLeft = 30;
   }
   
   document.getElementById('timer').innerText = '⏱ ' + timeLeft + ' detik';
